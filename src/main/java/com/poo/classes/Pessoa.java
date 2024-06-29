@@ -2,10 +2,10 @@ package com.poo.classes;
 
 public class Pessoa {
 
-    String nome;
+    private String nome;
     String cpf;
     int rg;
-    String endereco;
+    Endereco endereco;
 
     public void imprimirInformacoes (){
 
