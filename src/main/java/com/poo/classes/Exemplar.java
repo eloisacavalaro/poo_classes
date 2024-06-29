@@ -2,13 +2,18 @@ package com.poo.classes;
 
 public class Exemplar {
 
-    Livro livro;
+    private Livro exemplar;
 
+    public Livro getExemplar(){
+        return exemplar;
+    }
+    public void setExemplar(Livro exemplar){
+        this.exemplar = exemplar;
+    }
     public void imprimirInformacoes (){
 
-        System.out.println("Livro: " + livro);
-        
-        }
+        System.out.println("Livro: " + getExemplar());
 
+        }
 
 }

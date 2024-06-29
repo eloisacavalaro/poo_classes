@@ -4,13 +4,19 @@ import java.time.LocalDate;
 
 public class Devolucao {
 
-    LocalDate dataDevolucao;
+    private LocalDate dataDevolucao;
 
-public void imprimirInformacoes (){
+    public LocalDate getDataDevolucao(){
+        return dataDevolucao;
+    }
+    public void setDataDevolucao(LocalDate dataDevolucao){
+        this.dataDevolucao = dataDevolucao;
+    }
+    public void imprimirInformacoes (){
 
-    System.out.println("Data de devolução: " + dataDevolucao); 
-
-    }    
+        System.out.println("Data de devolução: " + getDataDevolucao()); 
+    
+        } 
 
 
 }

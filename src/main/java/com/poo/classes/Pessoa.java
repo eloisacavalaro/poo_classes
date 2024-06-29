@@ -3,18 +3,49 @@ package com.poo.classes;
 public class Pessoa {
 
     private String nome;
-    String cpf;
-    int rg;
-    Endereco endereco;
+    private String cpf;
+    private String rg;
+    private Endereco endereco;
 
+    public String getNome(){
+        return nome;
+    }
+    public String getCpf(){
+        return cpf;
+    }
+    public String getRg(){
+        return rg;
+    }
+    public Endereco getEndereco(){
+        return endereco;
+    }
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+    public void setCpf(String cpf){
+        String cpfNumerico = cpf.replaceAll("\\D", "");
+        if ((cpfNumerico.length())==11) {
+
+            this.cpf = cpf;
+        }
+    }
+    public void setRg(String rg){
+       String rgNumerico = rg.replaceAll("\\D", "");
+        if ((rgNumerico.length())==9) {
+
+            this.rg = rg;
+        }
+    }
+    public void setEndereco(Endereco endereco){
+        this.endereco = endereco;
+    }
     public void imprimirInformacoes (){
 
-        System.out.println("Nome: " + nome);  
-        System.out.println("RG: " + rg);
-        System.out.println("CPF: " + cpf);
-        System.out.println("Endereço: " + endereco);
+        System.out.println("Nome: " + getNome());  
+        System.out.println("RG: " + getRg());
+        System.out.println("CPF: " + getCpf());
+        System.out.println("Endereço: " + getEndereco());
 
     }
-
 
 }
