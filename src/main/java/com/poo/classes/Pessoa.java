@@ -1,11 +1,21 @@
 package com.poo.classes;
 
 public class Pessoa {
+    private static int contador = 1;
 
+    private int idPessoa;
     private String nome;
     private String cpf;
     private String rg;
     private Endereco endereco;
+
+    public Pessoa(String nome, String cpg, Endereco endereco){
+        this.nome = nome;
+        this.cpf = cpf;
+        this.endereco = endereco;
+        this.idPessoa = contador;
+        contador++;
+    }
 
     public String getNome(){
         return nome;

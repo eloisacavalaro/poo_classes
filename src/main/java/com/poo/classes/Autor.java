@@ -2,7 +2,16 @@ package com.poo.classes;
 
 public class Autor {
 
+    private static int contador = 1;
+
+    private int idAutor;
     private String nome;
+
+    public Autor(String nome){
+        this.nome = nome;
+        this.idAutor = contador;
+        contador++;
+    }
 
     public String getNome(){
         return nome;
@@ -15,5 +24,6 @@ public class Autor {
         System.out.println("Nome do Autor: " + getNome());
     
     }
+   
 
 }

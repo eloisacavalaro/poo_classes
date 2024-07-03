@@ -2,12 +2,25 @@ package com.poo.classes;
 
 public class Endereco {
 
+    private static int contador = 1;
+
+    private int idEndereco;
+    private int cep;
     private String uf;
     private String cidade;
     private String tipo;
     private String logradouro;
     private String complemento;
 
+    public Endereco (int cep){
+        this.cep = cep;
+        this.idEndereco = contador;
+        contador++;
+    }
+
+    public int getCep(){
+        return cep;
+    }
     public String getUf(){
         return uf;
     }
@@ -22,6 +35,9 @@ public class Endereco {
     }
     public String getComplemento(){
         return complemento;
+    }
+    public void setCep(int cep){
+        this.cep = cep;
     }
     public void setUf(String uf){
         if (uf != null && uf.matches("^[A-Z]{2}$")) {
@@ -42,8 +58,10 @@ public class Endereco {
     public void setComplemento(String complemento){
         this.complemento = complemento;
     }
+
     public void imprimirInformacoes(){
 
+        System.out.println("CEP: " + getCep());
         System.out.println("UF: " + getUf());
         System.out.println("Cidade: " + getCidade());
         System.out.println("Tipo: " + getTipo());
