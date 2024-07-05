@@ -9,14 +9,17 @@ public class Pessoa {
     private String rg;
     private Endereco endereco;
 
-    public Pessoa(String nome, String cpg, Endereco endereco){
+    public Pessoa(String nome, String cpf, String rg,Endereco endereco){
         this.nome = nome;
         this.cpf = cpf;
+        this.rg = rg;
         this.endereco = endereco;
         this.idPessoa = contador;
         contador++;
     }
-
+    public int getIdPessoa(){
+        return idPessoa;
+    }
     public String getNome(){
         return nome;
     }
@@ -28,6 +31,9 @@ public class Pessoa {
     }
     public Endereco getEndereco(){
         return endereco;
+    }
+    public void setIdPessoa(int idPessoa){
+        this.idPessoa = idPessoa;
     }
     public void setNome(String nome){
         this.nome = nome;

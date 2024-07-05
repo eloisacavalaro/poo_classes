@@ -11,9 +11,14 @@ public class Editora {
         this.idEditora = contador;
         contador++;
     }
-
+    public int getIdEditora(){
+        return idEditora;
+    }
     public String getNome(){
         return nome;
+    }
+    public void setIdEditora(int idEditora){
+        this.idEditora = idEditora;
     }
     public void setNome(String nome){
         this.nome = nome;

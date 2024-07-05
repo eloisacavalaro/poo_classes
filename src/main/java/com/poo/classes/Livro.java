@@ -15,7 +15,9 @@ public class Livro {
         this.idLivro = contador;
         contador++;
     }
-
+    public int getIdLivro(){
+        return idLivro;
+    }
     public String getEdicao(){
         return edicao;
     }
@@ -24,6 +26,9 @@ public class Livro {
     }
     public int getAno(){
         return ano;
+    }
+    public void setIdLivro(int idLivro){
+        this.idLivro = idLivro;
     }
     public void setEdicao(String edicao){
         this.edicao = edicao;

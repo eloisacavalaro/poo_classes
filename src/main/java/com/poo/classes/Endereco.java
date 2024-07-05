@@ -17,7 +17,11 @@ public class Endereco {
         this.idEndereco = contador;
         contador++;
     }
-
+    public Endereco(String string, String string2, String string3, String string4) {
+    }
+    public int getIdEndereco(){
+        return idEndereco;
+    }
     public int getCep(){
         return cep;
     }
@@ -35,6 +39,9 @@ public class Endereco {
     }
     public String getComplemento(){
         return complemento;
+    }
+    public void setIdAutor(int idEndereco){
+        this.idEndereco = idEndereco;
     }
     public void setCep(int cep){
         this.cep = cep;
