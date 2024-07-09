@@ -10,10 +10,6 @@ public class ClassesApplication {
 		SpringApplication.run(ClassesApplication.class, args);
 		limpa_windows();
 
-		
-		Menu menu = new Menu();
-		menu.menu();
-
 
 		finaliza();
 	}
